@@ -8,7 +8,7 @@ You can set the submitted parameter of any of the five table boxes to 1 "onclick
 Because the onclick event needs to be triggered by clicking the table box, we can use the onfocus event and its autofocus attribute to automatically trigger the onfocus event, and modify the payload to: "onfocus = alert (1) autofocus;"
 
  
-4、	成功触发xss。
+4、	XSS triggered successfully.
  
 CSRF
 1、CSRF POC
@@ -34,5 +34,5 @@ Intercepts the request packet corresponding to "setting the security problem", b
 </html>
 
 2、Save the page to my server (simulating the attacker's server) at http://evil.com/jwcsrf.html
-3、After confirming the login status, I will visit http://evil.com/cdjwc.ccu.edu.cn/jsxsd/jwcsrf.html
+3、After confirming the login status, I will visit http://evil.com/cdjwc.ccu.edu.cn/target.com/jwcsrf.html
 4、After accessing CSRF, x s s will be triggered automatically, because changing the password needs to verify the original password. You can inject XSS page into other users' background through CSRF, and get user cookies by xss
