@@ -1,11 +1,11 @@
 # XSS
 1、	Log in later to the security settings page.
 
- ![maze](https://github.com/Kevil-hui/bug-report/blob/master/pic/1.jpg)  
+ ![img](https://github.com/Kevil-hui/bug-report/blob/master/pic/1.jpg)  
  
 2、	Click save and intercept the package. It is found that the real name is URL encoded and other parameters are transmitted in clear text.
 
-  ![maze](https://github.com/Kevil-hui/bug-report/blob/master/pic/2.jpg)  
+  ![i](https://github.com/Kevil-hui/bug-report/blob/master/pic/2.jpg)  
   
 3、	XSS PAYLOAD1:1" onclick=alert(1)//   
     XSS PAYLOAD2：" onfocus=alert(1) autofocus ;'
@@ -13,11 +13,11 @@
 You can set the submitted parameter of any of the five table boxes to 1 "onclick = alert (1) / /, and then replay the data package.
 Because the onclick event needs to be triggered by clicking the table box, we can use the onfocus event and its autofocus attribute to automatically trigger the onfocus event, and modify the payload to: "onfocus = alert (1) autofocus;"
 
-  ![maze]( https://github.com/Kevil-hui/bug-report/blob/master/pic/3.jpg)  
+  ![i]( https://github.com/Kevil-hui/bug-report/blob/master/pic/3.jpg)  
  
 4、	XSS triggered successfully.
 
-  ![maze]( https://github.com/Kevil-hui/bug-report/blob/master/pic/4.jpg)  
+  ![i]( https://github.com/Kevil-hui/bug-report/blob/master/pic/4.jpg)  
   
   
 # CSRF
@@ -50,4 +50,4 @@ Intercepts the request packet corresponding to "setting the security problem", b
 
 4、After accessing CSRF, xss will be triggered automatically, because changing the password needs to verify the original password. You can inject XSS page into other users' background through CSRF, and get user cookies by xss
 
-  ![maze]( https://github.com/Kevil-hui/bug-report/blob/master/pic/5.jpg)  
+  ![i]( https://github.com/Kevil-hui/bug-report/blob/master/pic/5.jpg)  
