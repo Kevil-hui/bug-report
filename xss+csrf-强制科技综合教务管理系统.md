@@ -48,6 +48,6 @@ Intercepts the request packet corresponding to "setting the security problem", b
 
 3、After confirming the login status, I will visit http://evil.com/target.com/jsxsd/jwcsrf.html
 
-4、After accessing CSRF, x s s will be triggered automatically, because changing the password needs to verify the original password. You can inject XSS page into other users' background through CSRF, and get user cookies by xss
+4、After accessing CSRF, xss will be triggered automatically, because changing the password needs to verify the original password. You can inject XSS page into other users' background through CSRF, and get user cookies by xss
 
   ![maze]( https://github.com/Kevil-hui/bug-report/blob/master/pic/5.jpg)  
